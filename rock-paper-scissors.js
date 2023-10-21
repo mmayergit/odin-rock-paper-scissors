@@ -6,7 +6,12 @@ function getComputerChoice() {
 
 // get Player selection
 function getPlayerChoice() {
-    return prompt("Choose one of 'Rock', 'Paper', or 'Scissors': ");
+    choice = prompt("Choose one of 'Rock', 'Paper', or 'Scissors': ");
+    while (!choice) {
+        alert("Please choose!");
+        choice = prompt("Choose one of 'Rock', 'Paper', or 'Scissors': ");
+    }
+    return choice;
 }
 
 // play a single round; return winner string
